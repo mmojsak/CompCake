@@ -76,11 +76,20 @@ def main():
 # Generate new content
     now = datetime.datetime.now()
     with open("index.md", "w") as f:
+        f.write(f"---\n")
+        f.write(f"layout: default\n")
+        f.write(f"---\n")
+        f.write(f"\n")
+        f.write(f"#  CompCake\n")
+        f.write(f"\n")
+        f.write(f"The cake fairy has chosen:\n")
+        f.write(f"  -  {drawn_names[0]}\n")
+        f.write(f"  -  {drawn_names[1]}\n")
+        f.write(f"  -  {drawn_names[2]}\n")
+        f.write(f"\n")
+        f.write(f"To bring the cake next week, see you all on the 26th!\n")
+        f.write(f"\n")
+        f.write(f"\n")
         f.write(f"# Updated on {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
-
-    print("Markdown file updated.")
-
-
-
 if __name__ == "__main__":
     main()
