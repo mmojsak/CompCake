@@ -35,4 +35,4 @@ jobs:
           git commit -m "Automated update $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
           git push origin HEAD:main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CAKE_TOKEN }}
