@@ -25,7 +25,7 @@ jobs:
           python-version: "3.x"
 
       - name: Run Python script
-        run: python update.py
+        run: python cakefairy.py
 
       - name: Commit and push changes
         run: |
