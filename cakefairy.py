@@ -1,7 +1,7 @@
 import numpy as np
 
 import random
-import argparse
+import datetime
 
 import csv
 
@@ -67,39 +67,20 @@ def main():
 
     names, weights = initialise(file_path)
 
-    parser = argparse.ArgumentParser(description="Draw names with weighted selection.")
+    num_to_draw = 3
+    drawn_names, new_weights = select_names(names=names, weights=weights, num_selections=num_to_draw)
+    write_names_and_weights(file_path, names, new_weights)
+    print(f"Drawn names: {', '.join(drawn_names)}")
 
-    # Options
-    parser.add_argument(
-        "-d", "--draw",
-        action="store_true",
-        help="Draw names randomly (default is 2 names)."
-    )
-    parser.add_argument(
-        "-n", "--num-names",
-        type=int,
-        default=2,
-        help="Specify the number of names to draw. Used with the --draw option."
-    )
-    parser.add_argument(
-        "-a", "--add-name",
-        type=str,
-        help="Add a new name to the list."
-    )
 
-    args = parser.parse_args()
+# Generate new content
+    now = datetime.datetime.now()
+    with open("index.md", "w") as f:
+        f.write(f"# Updated on {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
 
-    # If the user wants to add a new name
-    if args.add_name:
-        names, weights = add_name(new_name=args.add_name, names=names, weights=weights)
-        write_names_and_weights(file_path, names, weights)
+    print("Markdown file updated.")
 
-    # If the user wants to draw names
-    if args.draw:
-        num_to_draw = args.num_names
-        drawn_names, new_weights = select_names(names=names, weights=weights, num_selections=num_to_draw)
-        write_names_and_weights(file_path, names, new_weights)
-        print(f"Drawn names: {', '.join(drawn_names)}")
+
 
 if __name__ == "__main__":
     main()
