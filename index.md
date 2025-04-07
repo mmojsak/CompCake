@@ -5,11 +5,11 @@ layout: default
 #  CompCake
 
 The cake fairy has chosen:
-  -  Lucy Smith
-  -  Jess Self
-  -  Jean Quertinmont
+  -  Gregor Lauter
+  -  Peter Graham
+  -  Joe Beames
 
 To bring the cake next week, see you all on the 26th!
 
 
-# Updated on 2025-03-31 01:01:49
+# Updated on 2025-04-07 01:01:00
