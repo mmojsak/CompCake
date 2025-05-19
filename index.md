@@ -5,11 +5,11 @@ layout: default
 #  CompCake
 
 The cake fairy has chosen:
+  -  Josh Harle
+  -  Tahlia Palmer
   -  Oliver Chen
-  -  Urvi
-  -  Jean Quertinmont
 
 To bring the cake next week, see you all on the 26th!
 
 
-# Updated on 2025-05-12 01:04:56
+# Updated on 2025-05-19 01:05:53
